@@ -1,0 +1,126 @@
+2020-01-07 14:24:49,105 624981 [ecycle mappings] WARN  ernal.discovery.MavenDiscovery  - CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-wtp does not contain lifecycle mapping metadata
+2020-01-07 14:24:49,111 624987 [ecycle mappings] WARN  ernal.discovery.MavenDiscovery  - CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-egit does not contain lifecycle mapping metadata
+2020-01-07 14:24:49,111 624987 [ecycle mappings] WARN  ernal.discovery.MavenDiscovery  - CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-subversive does not contain lifecycle mapping metadata
+2020-01-07 14:24:49,118 624994 [ecycle mappings] WARN  ernal.discovery.MavenDiscovery  - CatalogItem org.eclipse.m2e.discovery.extras.m2e-chromatic does not contain lifecycle mapping metadata
+2020-01-07 14:29:15,049 890925 [d maven project] ERROR .m2e.editor.pom.MavenPomEditor  - failed to load maven project for org.eclipse.ui.part.FileEditorInput(/6_Flow/pom.xml)
+org.eclipse.core.runtime.CoreException: Could not read maven project
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:847)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.lambda$22(ProjectRegistryManager.java:1064)
+	at com.google.common.cache.LocalCache$LocalManualCache$1.load(LocalCache.java:4878)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3529)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2278)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2155)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2045)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3953)
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4873)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.getMavenProject(ProjectRegistryManager.java:1063)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectFacade.getMavenProject(MavenProjectFacade.java:244)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:261)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:717)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$3.run(MavenPomEditor.java:1043)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Some problems were encountered while processing the POMs:
+[ERROR] Unresolveable build extension: Plugin org.kie:kie-maven-plugin:7.4.1.Final or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.kie:kie-maven-plugin:jar:7.4.1.Final @ 
+[ERROR] Unknown packaging: kjar @ line 8, column 14
+[ERROR] Non-resolvable import POM: Failure to transfer org.drools:drools-bom:pom:7.4.1.Final from https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced. Original error: Could not transfer artifact org.drools:drools-bom:pom:7.4.1.Final from/to central (https://repo.maven.apache.org/maven2): repo.maven.apache.org @ line 22, column 19
+[ERROR] 'dependencies.dependency.version' for org.drools:drools-compiler:jar is missing. @ line 40, column 15
+[ERROR] 'dependencies.dependency.version' for org.drools:drools-decisiontables:jar is missing. @ line 57, column 15
+
+org.apache.maven.project.ProjectBuildingException: Some problems were encountered while processing the POMs:
+[ERROR] Unresolveable build extension: Plugin org.kie:kie-maven-plugin:7.4.1.Final or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.kie:kie-maven-plugin:jar:7.4.1.Final @ 
+[ERROR] Unknown packaging: kjar @ line 8, column 14
+[ERROR] Non-resolvable import POM: Failure to transfer org.drools:drools-bom:pom:7.4.1.Final from https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced. Original error: Could not transfer artifact org.drools:drools-bom:pom:7.4.1.Final from/to central (https://repo.maven.apache.org/maven2): repo.maven.apache.org @ line 22, column 19
+[ERROR] 'dependencies.dependency.version' for org.drools:drools-compiler:jar is missing. @ line 40, column 15
+[ERROR] 'dependencies.dependency.version' for org.drools:drools-decisiontables:jar is missing. @ line 57, column 15
+
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProjects(MavenImpl.java:677)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.lambda$13(ProjectRegistryManager.java:867)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:1022)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectsWithDependencies(ProjectRegistryManager.java:863)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:832)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.lambda$22(ProjectRegistryManager.java:1064)
+	at com.google.common.cache.LocalCache$LocalManualCache$1.load(LocalCache.java:4878)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3529)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2278)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2155)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2045)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3953)
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4873)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.getMavenProject(ProjectRegistryManager.java:1063)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectFacade.getMavenProject(MavenProjectFacade.java:244)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:261)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:717)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$3.run(MavenPomEditor.java:1043)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2020-01-07 14:58:27,538 2643414 [ency Management] ERROR nal.actions.EnableNatureAction  - Could not calculate build plan: Plugin org.apache.maven.plugins:maven-jar-plugin:2.4 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-jar-plugin:jar:2.4
+org.eclipse.core.runtime.CoreException: Could not calculate build plan: Plugin org.apache.maven.plugins:maven-jar-plugin:2.4 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-jar-plugin:jar:2.4
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.setupMojoExecution(MavenImpl.java:410)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$1(MavenImpl.java:418)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.setupMojoExecution(MavenImpl.java:418)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.setupMojoExecution(ProjectRegistryManager.java:1016)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectFacade.getMojoExecution(MavenProjectFacade.java:410)
+	at org.eclipse.m2e.core.project.configurator.AbstractCustomizableLifecycleMapping.getBuildParticipants(AbstractCustomizableLifecycleMapping.java:78)
+	at org.eclipse.m2e.core.project.configurator.AbstractLifecycleMapping.configure(AbstractLifecycleMapping.java:99)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.lambda$2(ProjectConfigurationManager.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:503)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.configureNewMavenProjects(ProjectConfigurationManager.java:294)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager$1.run(ProjectConfigurationManager.java:528)
+	at org.eclipse.m2e.core.internal.embedder.AbstractRunnable.call(AbstractRunnable.java:28)
+	at org.eclipse.m2e.core.internal.embedder.AbstractRunnable.call(AbstractRunnable.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1375)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.enableMavenNature(ProjectConfigurationManager.java:525)
+	at org.eclipse.m2e.core.ui.internal.actions.EnableNatureAction$1.run(EnableNatureAction.java:141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.maven.plugin.PluginResolutionException: Plugin org.apache.maven.plugins:maven-jar-plugin:2.4 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-jar-plugin:jar:2.4
+	at org.apache.maven.plugin.internal.DefaultPluginDependenciesResolver.resolve(DefaultPluginDependenciesResolver.java:120)
+	at org.eclipse.m2e.core.internal.project.registry.EclipsePluginDependenciesResolver.resolve(EclipsePluginDependenciesResolver.java:49)
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getPluginDescriptor(DefaultMavenPluginManager.java:182)
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getMojoDescriptor(DefaultMavenPluginManager.java:286)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.getMojoDescriptor(DefaultBuildPluginManager.java:244)
+	at org.apache.maven.lifecycle.internal.DefaultLifecycleExecutionPlanCalculator.setupMojoExecution(DefaultLifecycleExecutionPlanCalculator.java:169)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.setupMojoExecution(MavenImpl.java:408)
+	... 23 more
+Caused by: org.eclipse.aether.resolution.ArtifactDescriptorException: Failed to read artifact descriptor for org.apache.maven.plugins:maven-jar-plugin:jar:2.4
+	at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.loadPom(DefaultArtifactDescriptorReader.java:255)
+	at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.readArtifactDescriptor(DefaultArtifactDescriptorReader.java:171)
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.readArtifactDescriptor(DefaultRepositorySystem.java:255)
+	at org.apache.maven.plugin.internal.DefaultPluginDependenciesResolver.resolve(DefaultPluginDependenciesResolver.java:106)
+	... 29 more
+Caused by: org.eclipse.aether.resolution.ArtifactResolutionException: Failure to transfer org.apache.maven.plugins:maven-jar-plugin:pom:2.4 from https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced. Original error: Could not transfer artifact org.apache.maven.plugins:maven-jar-plugin:pom:2.4 from/to central (https://repo.maven.apache.org/maven2): repo.maven.apache.org
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:424)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:229)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:207)
+	at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.loadPom(DefaultArtifactDescriptorReader.java:240)
+	... 32 more
+Caused by: org.eclipse.aether.transfer.ArtifactTransferException: Failure to transfer org.apache.maven.plugins:maven-jar-plugin:pom:2.4 from https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced. Original error: Could not transfer artifact org.apache.maven.plugins:maven-jar-plugin:pom:2.4 from/to central (https://repo.maven.apache.org/maven2): repo.maven.apache.org
+	at org.eclipse.aether.internal.impl.DefaultUpdateCheckManager.newException(DefaultUpdateCheckManager.java:225)
+	at org.eclipse.aether.internal.impl.DefaultUpdateCheckManager.checkArtifact(DefaultUpdateCheckManager.java:193)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.gatherDownloads(DefaultArtifactResolver.java:559)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:483)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:401)
+	... 35 more
+2020-01-13 11:42:36,684 4639041 [rools-archetype] WARN  nternal.embedder.EclipseLogger  - The POM for org.kie:kie-maven-plugin:jar:7.32.0.k20191223 is missing, no dependency information available
+2020-01-13 11:42:39,523 4641880 [rools-archetype] WARN  nternal.embedder.EclipseLogger  - Failure to transfer org.apache.maven.plugins:maven-site-plugin/maven-metadata.xml from https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced. Original error: Could not transfer metadata org.apache.maven.plugins:maven-site-plugin/maven-metadata.xml from/to central (https://repo.maven.apache.org/maven2): repo.maven.apache.org
+2020-01-13 11:42:39,525 4641882 [rools-archetype] WARN  nternal.embedder.EclipseLogger  - Failure to transfer org.apache.maven.plugins:maven-site-plugin/maven-metadata.xml from https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced. Original error: Could not transfer metadata org.apache.maven.plugins:maven-site-plugin/maven-metadata.xml from/to central (https://repo.maven.apache.org/maven2): repo.maven.apache.org
+2020-01-13 11:42:39,525 4641882 [rools-archetype] WARN  nternal.embedder.EclipseLogger  - Failure to transfer org.apache.maven.plugins:maven-site-plugin/maven-metadata.xml from https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced. Original error: Could not transfer metadata org.apache.maven.plugins:maven-site-plugin/maven-metadata.xml from/to central (https://repo.maven.apache.org/maven2): repo.maven.apache.org
+2020-01-13 11:42:51,582 4653939 [er-49: Building] WARN  nternal.embedder.EclipseLogger  - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-01-13 11:42:51,591 4653948 [er-49: Building] WARN  nternal.embedder.EclipseLogger  - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-01-13 11:42:51,835 4654192 [er-49: Building] WARN  nternal.embedder.EclipseLogger  - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-01-13 11:42:51,838 4654195 [er-49: Building] WARN  nternal.embedder.EclipseLogger  - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-01-14 09:14:03,004 0      [ker-4: Building] WARN  nternal.embedder.EclipseLogger  - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-01-14 09:14:03,063 59     [ker-4: Building] WARN  nternal.embedder.EclipseLogger  - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-01-14 09:14:04,038 1034   [ker-4: Building] WARN  nternal.embedder.EclipseLogger  - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-01-14 09:14:04,041 1037   [ker-4: Building] WARN  nternal.embedder.EclipseLogger  - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-01-14 09:14:04,479 1475   [ker-4: Building] WARN  nternal.embedder.EclipseLogger  - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-01-14 09:14:04,481 1477   [ker-4: Building] WARN  nternal.embedder.EclipseLogger  - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-01-14 09:14:07,440 4436   [er-21: Building] WARN  nternal.embedder.EclipseLogger  - The POM for org.kie:kie-maven-plugin:jar:7.32.0.k20191223 is missing, no dependency information available

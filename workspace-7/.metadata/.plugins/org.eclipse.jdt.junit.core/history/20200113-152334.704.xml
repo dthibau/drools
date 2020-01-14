@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestAssurance (3)" project="ecl-tp1" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="org.formation.test.TestAssurance" time="2.651">
+    <testcase name="test17" classname="org.formation.test.TestAssurance" time="2.641"/>
+    <testcase name="test20" classname="org.formation.test.TestAssurance" time="0.005"/>
+    <testcase name="test23_5_10" classname="org.formation.test.TestAssurance" time="0.005"/>
+  </testsuite>
+</testrun>

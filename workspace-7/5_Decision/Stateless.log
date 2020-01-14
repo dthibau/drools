@@ -1,0 +1,39 @@
+<object-stream>
+<org.drools.core.audit.WorkingMemoryLog>
+  <version>6.1</version>
+  <events>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>1</factId>
+      <objectToString>org.formation.model.stateless.Conducteur@7dc11a31</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>2</factId>
+      <objectToString>org.formation.model.stateless.Assurance@109ec777</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>prix_vs_age_0 [1, 2]</activationId>
+      <rule>prix_vs_age_0</rule>
+      <declarations>$a=org.formation.model.stateless.Assurance@109ec777</declarations>
+      <factHandleIds>2,1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>prix_vs_age_0 [1, 2]</activationId>
+      <rule>prix_vs_age_0</rule>
+      <declarations>$a=org.formation.model.stateless.Assurance@109ec777</declarations>
+      <factHandleIds>2,1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>prix_vs_age_0 [1, 2]</activationId>
+      <rule>prix_vs_age_0</rule>
+      <declarations>$a=org.formation.model.stateless.Assurance@109ec777</declarations>
+      <factHandleIds>2,1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+  </events>
+  <engine>PHREAK</engine>
+</org.drools.core.audit.WorkingMemoryLog>
+</object-stream>

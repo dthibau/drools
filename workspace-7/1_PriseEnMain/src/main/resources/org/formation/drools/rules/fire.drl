@@ -1,0 +1,55 @@
+//created on: 5 avr. 2015
+package org.formation.rules
+
+//list any import classes here.
+import org.formation.model.stateful.*;
+
+
+//declare any global variables here
+
+
+rule "no fire"
+
+    when
+        not Alarm(  )
+        not Sprinkler( on == true  )
+    then
+        System.out.println("it's OK");
+end
+
+rule "raise alarm"
+    when
+        exists Fire( )
+    then
+        insertLogical(new Alarm());//insert(new Alarm());
+        System.out.println("Alarm !!");
+end
+
+rule "turn on sprinkler"
+	when
+		Fire( $room : room  )
+		$sprinkler : Sprinkler( room == $room)
+	then
+		modify($sprinkler){setOn(true)};
+		System.out.println("turn on sprinkler for room "+$room.getName());
+end
+rule "turn off sprinkler"
+	when
+		$room : Room(  )
+		not Fire( room == $room  )
+		$sprinkler : Sprinkler( on == true, room == $room )
+	then
+		modify($sprinkler){setOn(false)};
+		System.out.println("turn OFF sprinkler for room "+$room.getName());
+end
+
+/*
+rule "stop the alarm"
+	when
+		not Fire(  )
+		$alarm : Alarm(  )
+	then
+		retract($alarm);
+		System.out.println("Cancel Alarm");
+end
+*/
