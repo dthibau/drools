@@ -1,0 +1,18 @@
+<kmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://jboss.org/kie/6.0.0/kmodule">
+	<kbase name="KBase2" default="true"
+		packages="org.formation">
+		<ksession name="stateless" type="stateless" default="false">
+			<fileLogger file="stateless.log" threaded="true"
+				interval="10" />
+			<listeners>
+				<ruleRuntimeEventListener
+					type="DebugRuleRuntimeEventListener" />
+<!-- 				<agendaEventListener -->
+<!-- 					type="org.domain.FirstAgendaListener" /> -->
+<!-- 				<agendaEventListener -->
+<!-- 					type="org.domain.SecondAgendaListener" /> -->
+			</listeners>
+		</ksession>
+	</kbase>
+</kmodule>

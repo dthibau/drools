@@ -5,6 +5,7 @@ import java.util.Collection;
 
 import org.formation.model.stateful.Sprinkler;
 import org.kie.api.KieServices;
+import org.kie.api.event.rule.DebugRuleRuntimeEventListener;
 import org.kie.api.logger.KieRuntimeLogger;
 import org.kie.api.runtime.ClassObjectFilter;
 import org.kie.api.runtime.KieContainer;
@@ -28,6 +29,9 @@ public class RuleRunner {
 
 		// Instancier une session stateless
 		StatelessKieSession statelessKieSession = kContainer.newStatelessKieSession();
+		statelessKieSession.addEventListener(new MyAgendaListener());
+		statelessKieSession.addEventListener(new MyRuleRuntimeEventListener());
+		statelessKieSession.addEventListener(new DebugRuleRuntimeEventListener());
 		logger = kServices.getLoggers().newFileLogger(statelessKieSession, "Stateless");
 		// Exécuter les règles
 		statelessKieSession.execute(Arrays.asList(facts));
@@ -45,8 +49,9 @@ public class RuleRunner {
 
 		// Instancier la session stateful
 		kSession = kContainer.newKieSession();
-//		kSession.addEventListener(new MyAgendaListener());
-//		kSession.addEventListener(new MyRuleRuntimeEventListener());
+		kSession.addEventListener(new MyAgendaListener());
+		kSession.addEventListener(new MyRuleRuntimeEventListener());
+		kSession.addEventListener(new DebugRuleRuntimeEventListener());
 		logger = KieServices.Factory.get().getLoggers().newFileLogger(kSession, "Stateful");		
 	}
 	/**

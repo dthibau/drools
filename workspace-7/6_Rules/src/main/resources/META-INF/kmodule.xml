@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">
+    <kbase name="rules" packages="org.formation.rules" default="true">
+        <ksession type="stateful"  name="ksession-rules" default="true"/>
+    </kbase>
+    <kbase name="dtables" packages="org.formation.dtables">
+        <ksession type="stateless" name="ksession-dtables"  default="true"/>
+    </kbase>
+    <kbase name="dsl" packages="org.formation.dsl" >
+        <ksession name="ksession-process" type="stateless" default="true"/>
+    </kbase>
+</kmodule>

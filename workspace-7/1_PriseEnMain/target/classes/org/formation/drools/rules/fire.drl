@@ -33,6 +33,7 @@ rule "turn on sprinkler"
 		modify($sprinkler){setOn(true)};
 		System.out.println("turn on sprinkler for room "+$room.getName());
 end
+/*
 rule "turn off sprinkler"
 	when
 		$room : Room(  )
@@ -41,6 +42,17 @@ rule "turn off sprinkler"
 	then
 		modify($sprinkler){setOn(false)};
 		System.out.println("turn OFF sprinkler for room "+$room.getName());
+end
+*/
+
+rule "turn off sprinkler 2"
+	when
+		$sprinkler : Sprinkler( on == true, $room : room )
+		not Fire( room == $room  )
+		
+	then
+		modify($sprinkler){setOn(false)};
+		System.out.println("turn OFF sprinkler 2 for room "+$room.getName());
 end
 
 /*

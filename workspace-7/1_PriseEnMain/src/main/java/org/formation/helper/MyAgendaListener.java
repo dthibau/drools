@@ -16,6 +16,7 @@ public class MyAgendaListener extends DefaultAgendaEventListener {
 	public void afterMatchFired(AfterMatchFiredEvent event) {
 		// TODO Auto-generated method stub
 		System.out.println("************\nAfter Match Fired " + event +"\n**********");
+		event.getMatch().getRule().
 	}
 
 	@Override
