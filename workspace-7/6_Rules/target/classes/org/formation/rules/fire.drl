@@ -28,6 +28,12 @@ salience 100
 		System.out.println("Immeuble initialisé");
 end
 
+rule "dummy"
+   when
+    exists Fire( ) //Fire()
+   then
+ System.out.println("Alarm !! ");
+end  
 
 rule "raise an alarm"
 	timer(int: 1s)

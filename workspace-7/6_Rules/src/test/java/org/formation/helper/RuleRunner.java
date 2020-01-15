@@ -16,10 +16,13 @@ import org.kie.api.runtime.rule.FactHandle;
 import org.kie.api.runtime.rule.QueryResults;
 
 public class RuleRunner {
+	private final String kBaseName,kSessionName;
 	KieSession kSession;
 	KieRuntimeLogger logger;
 
-	public RuleRunner() {
+	public RuleRunner(String kBaseName,String kSessionName) {
+		this.kBaseName = kBaseName;
+		this.kSessionName = kSessionName;
 	}
 
 	public void runStatelessRules(Object[] facts)
@@ -29,9 +32,8 @@ public class RuleRunner {
 		KieContainer kContainer = kServices.getKieClasspathContainer();
 		
 
-
 		// Instancier une session stateless
-		StatelessKieSession statelessKieSession = kContainer.newStatelessKieSession();
+		StatelessKieSession statelessKieSession = kContainer.newStatelessKieSession(kSessionName);
 		
 
 		// Exécuter les règles
@@ -48,7 +50,7 @@ public class RuleRunner {
 		KieContainer kContainer = kServices.getKieClasspathContainer();
 
 		// Instancier la session stateful
-		kSession = kContainer.newKieSession("ksession-rules");
+		kSession = kContainer.newKieSession(kSessionName);
 		logger = KieServices.Factory.get().getLoggers().newFileLogger(kSession, "Stateful");		
 	}
 	/**

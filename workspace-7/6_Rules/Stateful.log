@@ -55,6 +55,27 @@
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
+      <activationId>dummy [0]</activationId>
+      <rule>dummy</rule>
+      <declarations></declarations>
+      <factHandleIds>5,0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>dummy [0]</activationId>
+      <rule>dummy</rule>
+      <declarations></declarations>
+      <factHandleIds>5,0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>dummy [0]</activationId>
+      <rule>dummy</rule>
+      <declarations></declarations>
+      <factHandleIds>5,0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
       <activationId>true [0]</activationId>
       <rule>true</rule>
       <declarations></declarations>
@@ -91,7 +112,7 @@
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>9</factId>
-      <objectToString>org.formation.model.stateful.Alarm@16e37d68</objectToString>
+      <objectToString>org.formation.model.stateful.Alarm@5783b152</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
@@ -104,21 +125,21 @@
       <type>4</type>
       <activationId>send Sms [9]</activationId>
       <rule>send Sms</rule>
-      <declarations>$a=org.formation.model.stateful.Alarm@16e37d68</declarations>
+      <declarations>$a=org.formation.model.stateful.Alarm@5783b152</declarations>
       <factHandleIds>9</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
       <activationId>send Sms [9]</activationId>
       <rule>send Sms</rule>
-      <declarations>$a=org.formation.model.stateful.Alarm@16e37d68</declarations>
+      <declarations>$a=org.formation.model.stateful.Alarm@5783b152</declarations>
       <factHandleIds>9</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
       <activationId>send Sms [9]</activationId>
       <rule>send Sms</rule>
-      <declarations>$a=org.formation.model.stateful.Alarm@16e37d68</declarations>
+      <declarations>$a=org.formation.model.stateful.Alarm@5783b152</declarations>
       <factHandleIds>9</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
@@ -177,21 +198,21 @@
       <type>4</type>
       <activationId>send Sms [9]</activationId>
       <rule>send Sms</rule>
-      <declarations>$a=org.formation.model.stateful.Alarm@16e37d68</declarations>
+      <declarations>$a=org.formation.model.stateful.Alarm@5783b152</declarations>
       <factHandleIds>9</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
       <activationId>send Sms [9]</activationId>
       <rule>send Sms</rule>
-      <declarations>$a=org.formation.model.stateful.Alarm@16e37d68</declarations>
+      <declarations>$a=org.formation.model.stateful.Alarm@5783b152</declarations>
       <factHandleIds>9</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
       <activationId>send Sms [9]</activationId>
       <rule>send Sms</rule>
-      <declarations>$a=org.formation.model.stateful.Alarm@16e37d68</declarations>
+      <declarations>$a=org.formation.model.stateful.Alarm@5783b152</declarations>
       <factHandleIds>9</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
@@ -229,26 +250,26 @@
       <type>4</type>
       <activationId>stop the alarm [0, 9]</activationId>
       <rule>stop the alarm</rule>
-      <declarations>$alarm=org.formation.model.stateful.Alarm@16e37d68</declarations>
+      <declarations>$alarm=org.formation.model.stateful.Alarm@5783b152</declarations>
       <factHandleIds>5,0,9</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
       <activationId>stop the alarm [0, 9]</activationId>
       <rule>stop the alarm</rule>
-      <declarations>$alarm=org.formation.model.stateful.Alarm@16e37d68</declarations>
+      <declarations>$alarm=org.formation.model.stateful.Alarm@5783b152</declarations>
       <factHandleIds>5,0,9</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>3</type>
       <factId>9</factId>
-      <objectToString>org.formation.model.stateful.Alarm@16e37d68</objectToString>
+      <objectToString>org.formation.model.stateful.Alarm@5783b152</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
       <activationId>stop the alarm [0, 9]</activationId>
       <rule>stop the alarm</rule>
-      <declarations>$alarm=org.formation.model.stateful.Alarm@16e37d68</declarations>
+      <declarations>$alarm=org.formation.model.stateful.Alarm@5783b152</declarations>
       <factHandleIds>5,0,9</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>

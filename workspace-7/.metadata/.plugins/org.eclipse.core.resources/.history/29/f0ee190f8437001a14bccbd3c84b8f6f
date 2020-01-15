@@ -1,0 +1,120 @@
+package org.formation.helper;
+
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+import org.formation.model.stateful.Alarm;
+import org.kie.api.KieServices;
+import org.kie.api.logger.KieRuntimeLogger;
+import org.kie.api.runtime.ClassObjectFilter;
+import org.kie.api.runtime.KieContainer;
+import org.kie.api.runtime.KieSession;
+import org.kie.api.runtime.StatelessKieSession;
+import org.kie.api.runtime.rule.FactHandle;
+import org.kie.api.runtime.rule.QueryResults;
+
+public class RuleRunner {
+	private final String kBaseName,kSessionName;
+	KieSession kSession;
+	KieRuntimeLogger logger;
+
+	public RuleRunner(String kBaseName,String kSessionName) {
+		this.kBaseName = kBaseName;
+		this.kSessionName = kSessionName;
+	}
+
+	public void runStatelessRules(Object[] facts)
+			throws Exception {
+		// Instancier un container basé sur le classpath
+		KieServices kServices = KieServices.Factory.get();
+		KieContainer kContainer = kServices.getKieClasspathContainer();
+		
+
+
+		// Instancier une session stateless
+		StatelessKieSession statelessKieSession = kContainer.newStatelessKieSession();
+		
+
+		// Exécuter les règles
+		statelessKieSession.execute(Arrays.asList(facts));
+
+	}
+
+	/**
+	 * Initiale une session et lui associe un fichier de trace
+	 */
+	public void initStatefulSession() {
+		// Instancier un container basé sur le classpath
+		KieServices kServices = KieServices.Factory.get();
+		KieContainer kContainer = kServices.getKieClasspathContainer();
+
+		// Instancier la session stateful
+		kSession = kContainer.newKieSession("ksession-rules");
+		logger = KieServices.Factory.get().getLoggers().newFileLogger(kSession, "Stateful");		
+	}
+	/**
+	 * Insère un tableau de faits
+	 * @param facts
+	 * @return
+	 */
+	public FactHandle[] insertFacts(Object[] facts){
+
+		FactHandle handles[] = new FactHandle[facts.length];
+		int i=0;
+		// Insérer les faits
+		for (Object fact : facts) {
+			handles[i++] = kSession.insert(fact);
+		}
+
+		return handles;
+	}
+
+
+	public void retractFact(FactHandle fHandle) {
+		kSession.delete(fHandle);
+	}
+
+	public void fireAllRules() {
+		kSession.fireAllRules();
+	}
+	
+	public void fireUntillHalt(){
+		ExecutorService executorService = Executors.newSingleThreadExecutor();
+		executorService.submit(new Runnable() {
+			
+			@Override
+			public void run() {
+				kSession.fireUntilHalt();
+				System.out.println("Thread exited");
+			}
+		});
+		
+	}
+	public void halt(){
+		System.out.println("About to halt the engine");
+		kSession.halt();
+	}
+	
+	public Collection<FactHandle> getFacts() {
+		return kSession.getFactHandles();
+	}
+
+	public void closeLogger() {
+		logger.close();
+	}
+
+	public Collection<FactHandle> getFacts(Class<?> class1) {
+		Collection<FactHandle> factHandles = kSession.getFactHandles(new ClassObjectFilter(class1));
+
+		return factHandles;
+	}
+
+	public void disposeSession(){
+		kSession.dispose();
+	}
+	public QueryResults executeQuery(String queryName){
+		return kSession.getQueryResults(queryName);
+	}
+}

@@ -27,7 +27,7 @@ public class TestFire {
 	
 	@BeforeClass
 	public static void init(){
-		ruleRunner = new RuleRunner();
+		ruleRunner = new RuleRunner("rules","ksession-rules");
 	}
 	@After
 	public void end() {

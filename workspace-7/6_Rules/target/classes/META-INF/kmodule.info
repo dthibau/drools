@@ -1,0 +1,102 @@
+<org.drools.core.rule.KieModuleMetaInfo>
+  <typeMetaInfos>
+    <entry>
+      <string>org.formation.model.stateless.Conducteur</string>
+      <org.drools.core.rule.TypeMetaInfo>
+        <kind>CLASS</kind>
+        <role>FACT</role>
+        <isDeclaredType>false</isDeclaredType>
+      </org.drools.core.rule.TypeMetaInfo>
+    </entry>
+    <entry>
+      <string>org.formation.model.stateful.Sprinkler</string>
+      <org.drools.core.rule.TypeMetaInfo>
+        <kind>CLASS</kind>
+        <role>FACT</role>
+        <isDeclaredType>false</isDeclaredType>
+      </org.drools.core.rule.TypeMetaInfo>
+    </entry>
+    <entry>
+      <string>org.formation.model.stateful.Room</string>
+      <org.drools.core.rule.TypeMetaInfo>
+        <kind>CLASS</kind>
+        <role>FACT</role>
+        <isDeclaredType>false</isDeclaredType>
+      </org.drools.core.rule.TypeMetaInfo>
+    </entry>
+    <entry>
+      <string>org.formation.rules.PanicMode</string>
+      <org.drools.core.rule.TypeMetaInfo>
+        <kind>CLASS</kind>
+        <role>FACT</role>
+        <isDeclaredType>true</isDeclaredType>
+      </org.drools.core.rule.TypeMetaInfo>
+    </entry>
+    <entry>
+      <string>org.formation.model.stateful.Alarm</string>
+      <org.drools.core.rule.TypeMetaInfo>
+        <kind>CLASS</kind>
+        <role>FACT</role>
+        <isDeclaredType>false</isDeclaredType>
+      </org.drools.core.rule.TypeMetaInfo>
+    </entry>
+    <entry>
+      <string>org.formation.model.stateless.Assurance</string>
+      <org.drools.core.rule.TypeMetaInfo>
+        <kind>CLASS</kind>
+        <role>FACT</role>
+        <isDeclaredType>false</isDeclaredType>
+      </org.drools.core.rule.TypeMetaInfo>
+    </entry>
+    <entry>
+      <string>org.formation.model.stateful.Fire</string>
+      <org.drools.core.rule.TypeMetaInfo>
+        <kind>CLASS</kind>
+        <role>FACT</role>
+        <isDeclaredType>false</isDeclaredType>
+      </org.drools.core.rule.TypeMetaInfo>
+    </entry>
+  </typeMetaInfos>
+  <rulesByPackage>
+    <entry>
+      <string>org.formation.drools.rules</string>
+      <set>
+        <string>conducteur a 5 ans d&apos;ancienneté</string>
+        <string>conducteur a 10 ans d&apos;ancienneté</string>
+        <string>conducteur confirmé</string>
+        <string>malus</string>
+        <string>jeune conducteur</string>
+      </set>
+    </entry>
+    <entry>
+      <string>org.formation.rules</string>
+      <set>
+        <string>room where sprinkler is on</string>
+        <string>send Sms</string>
+        <string>Set all sprinkler on</string>
+        <string>always panic object</string>
+        <string>dummy</string>
+        <string>less than 2 fires is normal mode</string>
+        <string>general evacuation</string>
+        <string>true</string>
+        <string>turn off sprinkler</string>
+        <string>more than 1 fire is panic mode</string>
+        <string>stop the alarm</string>
+        <string>turn on sprinkler</string>
+        <string>raise an alarm</string>
+        <string>no fire</string>
+      </set>
+    </entry>
+    <entry>
+      <string>Org.formation.model.stateless</string>
+      <set>
+        <string>Assurance_13</string>
+        <string>Assurance_12</string>
+        <string>Assurance_11</string>
+        <string>Incidents_28</string>
+        <string>Anciennete_20</string>
+        <string>Anciennete_21</string>
+      </set>
+    </entry>
+  </rulesByPackage>
+</org.drools.core.rule.KieModuleMetaInfo>
