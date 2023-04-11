@@ -1,0 +1,6 @@
+package org.formation.cep;
+
+import org.formation.cep.model.HeartAttackEvent;
+import org.formation.cep.model.HeartBeatEvent;
+
+
