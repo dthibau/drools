@@ -1,0 +1,15 @@
+template header
+ageMin
+ageMax
+prixBase
+
+package org.formation.drools.rules
+
+import org.formation.model.stateless.Conducteur;
+import org.formation.model.stateless.Assurance;
+
+template "Price depending on age"
+
+# Write rule template here
+
+end template
