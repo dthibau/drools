@@ -1,0 +1,173 @@
+<object-stream>
+<org.drools.core.audit.WorkingMemoryLog>
+  <version>6.1</version>
+  <events>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>1</factId>
+      <objectToString>Room name = kitchen</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>2</factId>
+      <objectToString>Room name = salon</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>3</factId>
+      <objectToString>Sprinkler on : false, room: Room name = kitchen</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>4</factId>
+      <objectToString>Sprinkler on : false, room: Room name = salon</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>5</factId>
+      <objectToString>Fire in room : Room name = kitchen</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Set all sprinkler on [3]</activationId>
+      <rule>Set all sprinkler on</rule>
+      <declarations>$sp=Sprinkler on : false, room: Room name = kitchen</declarations>
+      <factHandleIds>3</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Set all sprinkler on [4]</activationId>
+      <rule>Set all sprinkler on</rule>
+      <declarations>$sp=Sprinkler on : false, room: Room name = salon</declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>always panic object [0]</activationId>
+      <rule>always panic object</rule>
+      <declarations></declarations>
+      <factHandleIds>0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>always panic object [0]</activationId>
+      <rule>always panic object</rule>
+      <declarations></declarations>
+      <factHandleIds>0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>6</factId>
+      <objectToString>PanicMode( on=false )</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>always panic object [0]</activationId>
+      <rule>always panic object</rule>
+      <declarations></declarations>
+      <factHandleIds>0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Number of Sprinkler on [0, 9]</activationId>
+      <rule>Number of Sprinkler on</rule>
+      <declarations>$totalOn=0</declarations>
+      <factHandleIds>0,9</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Number of Sprinkler on [0, 9]</activationId>
+      <rule>Number of Sprinkler on</rule>
+      <declarations>$totalOn=0</declarations>
+      <factHandleIds>0,9</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Number of Sprinkler on [0, 9]</activationId>
+      <rule>Number of Sprinkler on</rule>
+      <declarations>$totalOn=0</declarations>
+      <factHandleIds>0,9</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>less than 2 fires is normal mode [0, 11, 6]</activationId>
+      <rule>less than 2 fires is normal mode</rule>
+      <declarations>$p=PanicMode( on=false )</declarations>
+      <factHandleIds>6,0,11</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>less than 2 fires is normal mode [0, 11, 6]</activationId>
+      <rule>less than 2 fires is normal mode</rule>
+      <declarations>$p=PanicMode( on=false )</declarations>
+      <factHandleIds>6,0,11</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>6</factId>
+      <objectToString>PanicMode( on=false )</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>less than 2 fires is normal mode [0, 11, 6]</activationId>
+      <rule>less than 2 fires is normal mode</rule>
+      <declarations>$p=PanicMode( on=false )</declarations>
+      <factHandleIds>6,0,11</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>turn on sprinkler [5, 3]</activationId>
+      <rule>turn on sprinkler</rule>
+      <declarations>$sprinkler=Sprinkler on : false, room: Room name = kitchen; $room=Room name = kitchen</declarations>
+      <factHandleIds>5,3</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>turn on sprinkler [5, 3]</activationId>
+      <rule>turn on sprinkler</rule>
+      <declarations>$sprinkler=Sprinkler on : false, room: Room name = kitchen; $room=Room name = kitchen</declarations>
+      <factHandleIds>5,3</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>3</factId>
+      <objectToString>Sprinkler on : true, room: Room name = kitchen</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>turn on sprinkler [5, 3]</activationId>
+      <rule>turn on sprinkler</rule>
+      <declarations>$sprinkler=Sprinkler on : true, room: Room name = kitchen; $room=Room name = kitchen</declarations>
+      <factHandleIds>5,3</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>5</type>
+      <activationId>Set all sprinkler on [3]</activationId>
+      <rule>Set all sprinkler on</rule>
+      <declarations>$sp=Sprinkler on : true, room: Room name = kitchen</declarations>
+      <factHandleIds>3</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Number of Sprinkler on [0, 9]</activationId>
+      <rule>Number of Sprinkler on</rule>
+      <declarations>$totalOn=1</declarations>
+      <factHandleIds>0,9</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Number of Sprinkler on [0, 9]</activationId>
+      <rule>Number of Sprinkler on</rule>
+      <declarations>$totalOn=1</declarations>
+      <factHandleIds>0,9</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Number of Sprinkler on [0, 9]</activationId>
+      <rule>Number of Sprinkler on</rule>
+      <declarations>$totalOn=1</declarations>
+      <factHandleIds>0,9</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+  </events>
+</org.drools.core.audit.WorkingMemoryLog>
+</object-stream>
