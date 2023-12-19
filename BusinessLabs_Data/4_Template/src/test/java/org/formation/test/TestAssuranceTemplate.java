@@ -34,6 +34,9 @@ public class TestAssuranceTemplate {
 	@Before
 	public void setUp() {
 		String drl = _generateFromTemplate();
+		
+		System.out.println("Generated DRL file is :\n" + drl);
+
 
 		// Prepare a virtual kmodule and ressources
 		KieServices kieServices = KieServices.Factory.get();

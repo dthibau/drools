@@ -6,7 +6,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.formation</groupId>
-  <artifactId>5_Decision</artifactId>
+  <artifactId>4.2_Template</artifactId>
   <version>1.0.0-SNAPSHOT</version>
 
   <name>Drools :: Sample Maven Project</name>
